@@ -41,18 +41,19 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
             [FromQuery] int? take = null,
             [FromQuery] string? email = null)
         {
-            var response = await _mediator.Send(new UsersQuery(take, skip, email));
+            var response = await _mediator.Send(new GetUsersQuery(take, skip, email));
             return Ok(response);
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(GetUserResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(GetUserByIdResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetAsync(
             [FromRoute] string userId,
             [FromRoute] string id)
         {
-            return Ok();
+            var response = await _mediator.Send(new GetUserByIdQuery(userId, id));
+            return Ok(response);
         }
 
 
@@ -62,15 +63,14 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         public async Task<IActionResult> PostAsync(CreateUserRequest request)
         {
             var response = await _mediator.Send(new CreateUserCommand(request.Email,
-                                                                             request.Name,
-                                                                             request.Surname,
-                                                                             request.CityId,
-                                                                             request.BirthDate,
-                                                                             request.Weight,
-                                                                             request.Height,
-                                                                             request.GenderId));
+                                                                      request.Name,
+                                                                      request.Surname,
+                                                                      request.CityId,
+                                                                      request.BirthDate,
+                                                                      request.Weight,
+                                                                      request.Height,
+                                                                      request.GenderId));
             return Ok(response);
-
         }
 
         [HttpPut("{id}")]
@@ -78,7 +78,15 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PutAsync(string id, UpdateUserRequest request)
         {
-            return Ok();
+            var response = await _mediator.Send(new UpdateUserCommand(id,
+                                                                      request.Name,
+                                                                      request.Surname,
+                                                                      request.CityId,
+                                                                      request.BirthDate,
+                                                                      request.Weight,
+                                                                      request.Height,
+                                                                      request.GenderId));
+            return Ok(response);
         }
 
         [HttpDelete("{id}")]
@@ -86,7 +94,8 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteAsync(string Id)
         {
-            return Ok();
+            var response = await _mediator.Send(new DeleteUserCommand(Id));
+            return Ok(response);
         }
     }
 }
