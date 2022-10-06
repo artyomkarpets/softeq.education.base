@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
 using MediatR;
-using TrialsSystem.UsersService.Api.Application.Commands;
-using TrialsSystem.UsersService.Api.Application.Queries;
 using TrialsSystem.UsersService.Api.Filters;
+using TrialsSystem.UsersService.Api.Application.Queries.UserManagementQueries;
+using TrialsSystem.UsersService.Api.Application.Commands.UserManagementCommands;
 
 namespace TrialsSystem.UsersService.Api.Controllers.v1
 {

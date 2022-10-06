@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TrialsSystem.UsersService.Api.Application.Commands.CityManagementCommands;
 using TrialsSystem.UsersService.Api.Application.Queries.CityManagementQueries;
-using TrialsSystem.UsersService.Api.Filters;
 using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Requests;
 using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Responses;
 
@@ -12,7 +11,6 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
     /// City management controller
     /// </summary>
     [Route("api/v1/{cityId}/[controller]")]
-    [ServiceFilter(typeof(UserExceptionFilter))]
     public class CityController : Controller
     {
         private readonly IMediator _mediator;

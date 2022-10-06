@@ -1,4 +1,4 @@
-﻿namespace TrialsSystem.UsersService.Api.Application.Commands
+﻿namespace TrialsSystem.UsersService.Api.Application.Commands.UserManagementCommands
 {
     public class DeleteUserCommand
     {

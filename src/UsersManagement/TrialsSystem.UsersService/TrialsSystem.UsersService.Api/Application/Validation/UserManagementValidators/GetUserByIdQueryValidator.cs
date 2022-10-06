@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
-using TrialsSystem.UsersService.Api.Application.Queries;
+using TrialsSystem.UsersService.Api.Application.Queries.UserManagementQueries;
+
 namespace TrialsSystem.UsersService.Api.Application.Validation.UserManagementValidators
 {
     public class GetUserByIdQueryValidator : AbstractValidator<GetUserByIdQuery>

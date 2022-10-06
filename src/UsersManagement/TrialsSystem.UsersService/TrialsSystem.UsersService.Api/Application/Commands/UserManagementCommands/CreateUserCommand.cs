@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
 
-namespace TrialsSystem.UsersService.Api.Application.Commands
+namespace TrialsSystem.UsersService.Api.Application.Commands.UserManagementCommands
 {
     public class CreateUserCommand : IRequest<CreateUserResponse>
     {
