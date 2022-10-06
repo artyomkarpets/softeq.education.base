@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrialsSystem.UsersService.Infrastructure.Models.BaseDTO;
 
-namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
+namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserResponses
 {
-    public class GetUserByIdResponse
+    public class UpdateUserResponse
     {
-        public string Email { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
 
@@ -21,9 +20,6 @@ namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
 
         public decimal? Height { get; set; }
 
-        public IdNameDto City { get; set; }
-       
-        public IdNameDto Gender { get; set; }
-
+        public string CityId { get; set; }
     }
 }

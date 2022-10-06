@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using TrialsSystem.UsersService.Api.Application.Commands.CityManagementCommands;
 using TrialsSystem.UsersService.Api.Application.Queries.CityManagementQueries;
-using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Requests;
-using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Responses;
+using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.CityRequests;
+using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.CityResponses;
 
 namespace TrialsSystem.UsersService.Api.Controllers.v1
 {

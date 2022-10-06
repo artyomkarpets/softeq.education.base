@@ -1,7 +1,7 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using MediatR;
 using TrialsSystem.UsersService.Api.Application.Commands.UserManagementCommands;
-using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
+using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserResponses;
 
 namespace TrialsSystem.UsersService.Api.Application.Handlers.UserManagementHandlers
 {

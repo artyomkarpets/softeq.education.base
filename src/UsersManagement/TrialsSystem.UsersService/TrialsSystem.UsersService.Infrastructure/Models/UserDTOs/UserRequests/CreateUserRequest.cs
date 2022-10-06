@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
+namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserRequests
 {
-    public class UpdateUserRequest
+    public class CreateUserRequest
     {
+        public string Email { get; set; }
+
         public string Name { get; set; }
 
         public string Surname { get; set; }
@@ -19,7 +22,8 @@ namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
         public decimal? Height { get; set; }
 
         public string CityId { get; set; }
-        
+
         public string GenderId { get; set; }
+
     }
 }

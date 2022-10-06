@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
+using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserRequests;
 
 namespace TrialsSystem.UsersService.Api.Application.Validation.UserManagementValidators
 {

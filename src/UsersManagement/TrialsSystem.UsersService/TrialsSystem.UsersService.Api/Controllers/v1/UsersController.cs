@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
 using MediatR;
 using TrialsSystem.UsersService.Api.Filters;
 using TrialsSystem.UsersService.Api.Application.Queries.UserManagementQueries;
 using TrialsSystem.UsersService.Api.Application.Commands.UserManagementCommands;
+using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserRequests;
+using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserResponses;
 
 namespace TrialsSystem.UsersService.Api.Controllers.v1
 {
@@ -31,7 +32,7 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         /// <param name="email">part of email (filter)</param>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<GetUsersResponse>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<GetUserResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
@@ -46,7 +47,7 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(GetUserByIdResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(GetUserResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetAsync(
             [FromRoute] string userId,

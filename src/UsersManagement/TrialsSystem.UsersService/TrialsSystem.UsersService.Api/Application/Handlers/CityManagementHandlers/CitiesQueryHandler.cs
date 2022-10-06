@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using TrialsSystem.UsersService.Api.Application.Queries.CityManagementQueries;
-using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Responses;
+using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.CityResponses;
 
 namespace TrialsSystem.UsersService.Api.Application.Handlers.CityManagementHandlers
 {

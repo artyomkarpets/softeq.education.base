@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Responses;
+using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.CityResponses;
 
 namespace TrialsSystem.UsersService.Api.Application.Commands.CityManagementCommands
 {

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrialsSystem.UsersService.Infrastructure.Models.BaseDTO;
 
-namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
+namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserRequests
 {
-    public class CreateUserRequest
+    public class GetUserByIdRequest
     {
         public string Email { get; set; }
 
@@ -21,9 +21,9 @@ namespace TrialsSystem.UsersService.Infrastructure.Models.UserDTOs
 
         public decimal? Height { get; set; }
 
-        public string CityId { get; set; }
+        public IdNameDto City { get; set; }
 
-        public string GenderId { get; set; }
+        public IdNameDto Gender { get; set; }
 
     }
 }

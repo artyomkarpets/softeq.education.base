@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.Requests;
+using TrialsSystem.UsersService.Infrastructure.Models.CityDTOs.CityRequests;
 
 namespace TrialsSystem.UsersService.Api.Application.Validation.CityManagementValidators
 {

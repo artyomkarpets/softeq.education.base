@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs;
+using TrialsSystem.UsersService.Infrastructure.Models.UserDTOs.UserResponses;
 
 namespace TrialsSystem.UsersService.Api.Application.Queries.UserManagementQueries
 {
-    public class GetUserByIdQuery : IRequest<GetUserByIdResponse>
+    public class GetUserByIdQuery : IRequest<GetUserResponse>
     {
         public string UserId { get; }
 
