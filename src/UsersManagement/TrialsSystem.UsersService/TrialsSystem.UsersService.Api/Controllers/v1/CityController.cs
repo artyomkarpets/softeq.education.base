@@ -23,7 +23,7 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         /// <summary>
         /// Get all cities by setting parameters and filters
         /// </summary>
-        /// <param name="userId">city Id</param>
+        /// <param name="userId">authorized user Id</param>
         /// <param name="skip">skip items (pagination parameters)</param>
         /// <param name="take">take items (pagination parameters)</param>
         /// <param name="email">part of email (filter)</param>
@@ -34,7 +34,7 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
         public async Task<IActionResult> GetAsync(
-            [FromRoute] string cityId,
+            [FromRoute] string userId,
             [FromQuery] int? skip = 0,
             [FromQuery] int? take = null,
             [FromQuery] string? email = null)
