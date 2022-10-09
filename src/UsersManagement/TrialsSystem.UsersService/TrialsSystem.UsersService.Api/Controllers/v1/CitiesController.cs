@@ -11,11 +11,11 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
     /// City management controller
     /// </summary>
     [Route("api/v1/{cityId}/[controller]")]
-    public class CityController : Controller
+    public class CitiesController : Controller
     {
         private readonly IMediator _mediator;
 
-        public CityController(IMediator mediator)
+        public CitiesController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -37,9 +37,9 @@ namespace TrialsSystem.UsersService.Api.Controllers.v1
             [FromRoute] string userId,
             [FromQuery] int? skip = 0,
             [FromQuery] int? take = null,
-            [FromQuery] string? email = null)
+            [FromQuery] string? name = null)
         {
-            var response = await _mediator.Send(new CitiesQuery(take, skip, email));
+            var response = await _mediator.Send(new CitiesQuery(take, skip, name));
             return Ok(response);
         }
 
