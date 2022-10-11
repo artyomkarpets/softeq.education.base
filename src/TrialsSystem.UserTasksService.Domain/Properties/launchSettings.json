@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TrialsSystem.UserTasksService.Domain": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
