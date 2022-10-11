@@ -57,7 +57,6 @@ namespace TrialsSystem.UsersService.Api
 
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();
