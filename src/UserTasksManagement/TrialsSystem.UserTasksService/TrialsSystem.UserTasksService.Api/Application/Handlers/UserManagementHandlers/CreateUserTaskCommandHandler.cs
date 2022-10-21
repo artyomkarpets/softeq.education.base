@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using TrialsSystem.UserTasksService.Api.Application.Commands.UserTaskManagementCommands;
-using TrialsSystem.UserTasksService.Domain.AggregatesModel.UserTaskAggregate;
+using TrialsSystem.UserTasksService.Domain.AggregatesModel.UserTasksAggregate;
 using TrialsSystem.UserTasksService.Infrastructure.Models.UserDTOs.UserResponses;
 
 namespace TrialsSystem.UserTasksService.Api.Application.Handlers.UserManagementHandlers

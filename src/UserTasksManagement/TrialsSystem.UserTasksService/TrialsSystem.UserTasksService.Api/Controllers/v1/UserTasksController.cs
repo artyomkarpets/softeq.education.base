@@ -3,7 +3,7 @@ using MediatR;
 using TrialsSystem.UserTasksService.Infrastructure.Models.UserDTOs.UserRequests;
 using TrialsSystem.UserTasksService.Infrastructure.Models.UserDTOs.UserResponses;
 using TrialsSystem.UserTasksService.Api.Application.Queries.UserTaskManagementQueries;
-using TrialsSystem.UserTasksService.Api.Application.Commands.UserManagementCommands;
+using TrialsSystem.UserTasksService.Api.Application.Commands.UserTaskManagementCommands;
 
 namespace TrialsSystem.UserTasksService.Api.Controllers.v1
 {

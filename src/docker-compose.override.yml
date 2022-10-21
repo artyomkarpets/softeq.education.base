@@ -24,9 +24,9 @@ services:
     ports:
       - 4101:80
       
-  # um.usertasks.service:
-    # environment:
-      # - ASPNETCORE_ENVIRONMENT=Development
-      # - ASPNETCORE_URLS=http://+:80
-    # ports:
-      # - 4102:80
+  um.usertasks.service:
+    environment:
+      - aspnetcore_environment=development
+      - aspnetcore_urls=http://+:80
+    ports:
+      - 4102:80
