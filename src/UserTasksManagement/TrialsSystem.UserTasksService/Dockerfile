@@ -14,7 +14,7 @@ COPY ["UserTasksManagement/TrialsSystem.UserTasksService/TrialsSystem.UserTasksS
 RUN dotnet restore "UserTasksManagement/TrialsSystem.UserTasksService/TrialsSystem.UserTasksService.sln"
 COPY . .
 
-WORKDIR UsersManagement/TrialsSystem.UserTasksService/TrialsSystem.UserTasksService.Api
+WORKDIR UserTasksManagement/TrialsSystem.UserTasksService/TrialsSystem.UserTasksService.Api
 RUN dotnet publish --no-restore -c Release -o /app/publish
 
 FROM build AS publish
